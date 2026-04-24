@@ -44,6 +44,16 @@ The world is generated in real-time based on the "DNA" of your code. Every monol
 
 ---
 
+<img width="1919" height="910" alt="Screenshot 2026-04-25 032317" src="https://github.com/user-attachments/assets/8d78193b-f443-4e96-87d7-d11c3302ad85" />
+
+
+<img width="1919" height="896" alt="Screenshot 2026-04-25 032336" src="https://github.com/user-attachments/assets/ae43df02-efcb-4cba-a54c-9839eb6fb722" />
+
+
+<img width="1919" height="898" alt="Screenshot 2026-04-25 032401" src="https://github.com/user-attachments/assets/593e97be-3374-44db-9430-cbafb775c978" />
+
+
+
 ## 📥 Installation
 
 ### 1. Clone the repo
