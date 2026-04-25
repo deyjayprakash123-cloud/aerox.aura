@@ -187,9 +187,13 @@ export const CinematicHUD = ({ history }: HUDProps) => {
         </GlassCard>
 
         {/* Dev credit */}
-        <GlassCard className="px-4 py-2.5 pointer-events-none ml-auto flex flex-col items-end justify-center" delay={0.3}>
+        <GlassCard className="px-4 py-2.5 pointer-events-none ml-auto flex flex-col items-end justify-center gap-0.5" delay={0.3}>
           <p className="text-[10px] text-gray-600 font-mono leading-tight">Developer: <span className="text-gray-400">Jayaprakash Dey</span></p>
           <p className="text-[10px] text-cyan-400/60 font-mono leading-tight">@jayy__hx</p>
+          <p className="text-[10px] text-gray-600 font-mono leading-tight">
+            <a href="mailto:deyjayprakash123@gmail.com" className="text-cyan-500/70 hover:text-cyan-400 transition-colors" style={{pointerEvents:'auto'}}>deyjayprakash123@gmail.com</a>
+          </p>
+          <p className="text-[9px] text-gray-700 font-mono leading-tight italic">For feedback, contact admin</p>
         </GlassCard>
       </div>
 
@@ -297,41 +301,7 @@ export const CinematicHUD = ({ history }: HUDProps) => {
         </p>
       </motion.div>
 
-      {/* ── TEMPORAL SHIFT ─────────────────────────────── */}
-      {history.length > 1 && (
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          style={{ position: 'fixed', bottom: '1.5rem', right: '1.5rem', zIndex: 15 }}
-        >
-          <div
-            className="p-4 rounded-2xl pointer-events-auto w-60"
-            style={{
-              background: 'rgba(4,8,18,0.72)',
-              backdropFilter: 'blur(32px)',
-              WebkitBackdropFilter: 'blur(32px)',
-              border: '0.5px solid rgba(255,255,255,0.08)',
-              boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
-            }}
-          >
-            <div className="flex justify-between mb-2">
-              <p className="text-[10px] text-gray-500 font-mono uppercase tracking-widest">Temporal Shift</p>
-              <p className="text-[10px] text-cyan-400 font-mono font-bold">{data.timestamp}</p>
-            </div>
-            <input
-              type="range" min={0} max={history.length - 1} value={timeIndex}
-              onChange={e => setTimeIndex(+e.target.value)}
-              className="w-full h-1 appearance-none rounded-full cursor-pointer"
-              style={{ accentColor: '#00e5ff', background: 'rgba(255,255,255,0.08)' }}
-            />
-            <div className="flex justify-between mt-1">
-              <span className="text-[9px] text-gray-700 font-mono">{history[0].timestamp}</span>
-              <span className="text-[9px] text-gray-700 font-mono">{history[history.length - 1].timestamp}</span>
-            </div>
-          </div>
-        </motion.div>
-      )}
+
     </div>
   );
 };

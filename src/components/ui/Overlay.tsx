@@ -98,34 +98,20 @@ export const Overlay = ({ history, onClose }: OverlayProps) => {
           )}
         </div>
 
-        {/* Temporal Slider */}
-        <BentoCard className="col-span-2 md:col-start-9 md:col-span-4 pointer-events-auto" delay={0.4}>
-          <div className="flex flex-col gap-4">
-            <div className="flex justify-between items-center">
-              <p className="text-xs text-gray-400 uppercase tracking-wider">Temporal Shift</p>
-              <p className="text-sm font-mono text-cyan-400 font-bold">{currentData.timestamp}</p>
-            </div>
-            <input 
-              type="range" 
-              min="0" 
-              max={history.length - 1} 
-              value={timeIndex}
-              onChange={(e) => setTimeIndex(Number(e.target.value))}
-              className="w-full accent-cyan-500 h-1 bg-gray-800 rounded-lg appearance-none cursor-pointer"
-            />
-            <div className="flex justify-between text-[10px] text-gray-500 font-mono">
-              <span>{history[0].timestamp}</span>
-              <span>{history[history.length-1].timestamp}</span>
-            </div>
-          </div>
-        </BentoCard>
+
       </div>
       
       {/* Bottom Branding & Mission */}
       <div className="absolute bottom-4 right-4 text-right flex flex-col items-end gap-2 pointer-events-none hidden md:flex">
-        <div className="bg-black/40 backdrop-blur-[25px] border border-white/10 px-4 py-3 rounded-lg flex flex-col items-end shadow-2xl">
+        <div className="bg-black/40 backdrop-blur-[25px] border border-white/10 px-4 py-3 rounded-lg flex flex-col items-end shadow-2xl gap-0.5">
           <p className="font-mono text-sm text-gray-400">Developer: Jayaprakash Dey</p>
           <p className="font-mono text-xs text-cyan-400">@jayy__hx</p>
+          <a href="mailto:deyjayprakash123@gmail.com"
+            className="font-mono text-xs text-cyan-500/80 hover:text-cyan-300 transition-colors"
+            style={{pointerEvents:'auto'}}>
+            deyjayprakash123@gmail.com
+          </a>
+          <p className="font-mono text-[10px] text-gray-600 italic">For feedback, contact admin</p>
         </div>
         <div className="px-2 mt-2">
           <p className="font-sans font-black text-white text-lg tracking-[0.2em] uppercase drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">

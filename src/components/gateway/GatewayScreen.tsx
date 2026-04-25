@@ -337,9 +337,18 @@ export const GatewayScreen = () => {
               </div>
 
               {/* Footer */}
-              <motion.div {...stagger(5)} className="px-8 pb-6 flex justify-between items-center">
-                <p className="text-[11px] text-gray-700 font-mono">Jayaprakash Dey · @jayy__hx</p>
-                <p className="text-[11px] text-gray-800 font-mono italic">"just vibe."</p>
+              <motion.div {...stagger(5)} className="px-8 pb-6 flex flex-col gap-1.5">
+                <div className="flex justify-between items-center">
+                  <p className="text-[11px] text-gray-600 font-mono">Jayaprakash Dey · <span className="text-cyan-500/70">@jayy__hx</span></p>
+                  <p className="text-[11px] text-gray-800 font-mono italic">"just vibe."</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <a href="mailto:deyjayprakash123@gmail.com"
+                    className="text-[11px] text-cyan-500/70 hover:text-cyan-400 transition-colors font-mono">
+                    deyjayprakash123@gmail.com
+                  </a>
+                  <p className="text-[10px] text-gray-700 font-mono italic">For feedback, contact admin</p>
+                </div>
               </motion.div>
             </div>
           </motion.div>
